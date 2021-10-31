@@ -157,6 +157,15 @@
     <Reference Include="Guna.UI2, Version=2.0.2.3, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.3\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -176,17 +185,65 @@
     <Compile Include="2ndPassWord.Designer.cs">
       <DependentUpon>2ndPassWord.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCoach.Designer.cs">
+      <DependentUpon>AddCoach.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddMatch.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddMatch.Designer.cs">
       <DependentUpon>AddMatch.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddReferee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddReferee.Designer.cs">
+      <DependentUpon>AddReferee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddResult.Designer.cs">
+      <DependentUpon>AddResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club.Designer.cs">
+      <DependentUpon>Club.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Club1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Club1.Designer.cs">
+      <DependentUpon>Club1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coach.Designer.cs">
+      <DependentUpon>Coach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditCoach.Designer.cs">
+      <DependentUpon>EditCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditReferee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditReferee.Designer.cs">
+      <DependentUpon>EditReferee.cs</DependentUpon>
     </Compile>
     <Compile Include="ForgotPassword.cs">
       <SubType>Form</SubType>
@@ -212,23 +269,29 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageClub.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageClub.Designer.cs">
-      <DependentUpon>ManageClub.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ManageMatch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ManageMatch.Designer.cs">
-      <DependentUpon>ManageMatch.cs</DependentUpon>
-    </Compile>
     <Compile Include="ManagePlayer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManagePlayer.Designer.cs">
       <DependentUpon>ManagePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Match.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Match.Designer.cs">
+      <DependentUpon>Match.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Player.Designer.cs">
+      <DependentUpon>Player.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Player1.Designer.cs">
+      <DependentUpon>Player1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -237,6 +300,12 @@
     </Compile>
     <Compile Include="Ranking.Designer.cs">
       <DependentUpon>Ranking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Referee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Referee.Designer.cs">
+      <DependentUpon>Referee.cs</DependentUpon>
     </Compile>
     <Compile Include="Registration.cs">
       <SubType>Form</SubType>
@@ -250,6 +319,12 @@
     <Compile Include="Result.Designer.cs">
       <DependentUpon>Result.cs</DependentUpon>
     </Compile>
+    <Compile Include="Score.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Score.Designer.cs">
+      <DependentUpon>Score.cs</DependentUpon>
+    </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,11 +334,35 @@
     <EmbeddedResource Include="2ndPassWord.resx">
       <DependentUpon>2ndPassWord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddCoach.resx">
+      <DependentUpon>AddCoach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddMatch.resx">
       <DependentUpon>AddMatch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddReferee.resx">
+      <DependentUpon>AddReferee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddResult.resx">
+      <DependentUpon>AddResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club.resx">
+      <DependentUpon>Club.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Club1.resx">
+      <DependentUpon>Club1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coach.resx">
+      <DependentUpon>Coach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditCoach.resx">
+      <DependentUpon>EditCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditReferee.resx">
+      <DependentUpon>EditReferee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
@@ -277,14 +376,17 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageClub.resx">
-      <DependentUpon>ManageClub.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ManageMatch.resx">
-      <DependentUpon>ManageMatch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ManagePlayer.resx">
       <DependentUpon>ManagePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Match.resx">
+      <DependentUpon>Match.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player.resx">
+      <DependentUpon>Player.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Player1.resx">
+      <DependentUpon>Player1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -299,11 +401,17 @@
     <EmbeddedResource Include="Ranking.resx">
       <DependentUpon>Ranking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Referee.resx">
+      <DependentUpon>Referee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Result.resx">
       <DependentUpon>Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Score.resx">
+      <DependentUpon>Score.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
@@ -335,8 +443,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\1200px-Premier_League_Logo.svg.png" />
-    <None Include="Resources\1200px-Premier_League_Logo.svg1.png" />
+    <Content Include="MetroFramework.txt" />
     <Content Include="Resources\139-1391483_png-file-svg-back-button-icon-png-transparent.png" />
     <None Include="Resources\WOL.png" />
     <None Include="Resources\WHU.png" />
@@ -360,7 +467,23 @@
     <None Include="Resources\admin.png" />
     <None Include="Resources\1455017114-premier-league-lion-green1.jpg" />
     <None Include="Resources\1455017114-premier-league-lion-green2.jpg" />
-    <None Include="Resources\dark-purple-geometric-triangle-shapes-background-background.jpg" />
+    <None Include="Resources\add_30px.png" />
+    <None Include="Resources\add_30px1.png" />
+    <None Include="Resources\add_30px11.png" />
+    <None Include="Resources\CgZFMkJFMzY.png" />
+    <None Include="Resources\CgZFMkJFMzY1.png" />
+    <None Include="Resources\1455017114-premier-league-lion-green-removebg-preview.jpg" />
+    <None Include="Resources\2705_fifa-22-release-date.jpg" />
+    <None Include="Resources\2705_fifa-22-release-date1.jpg" />
+    <None Include="Resources\add_16px.png" />
+    <None Include="Resources\2561427_edit_icon.png" />
+    <Content Include="Resources\close_window_30px.png" />
+    <None Include="Resources\edit_30px.png" />
+    <None Include="Resources\delete_user_male_30px.png" />
+    <None Include="Resources\delete_30px.png" />
+    <None Include="Resources\FIFA22-PC-REQUIREMENTS.jpg" />
+    <None Include="Resources\FIFA22-PC-REQUIREMENTS1.jpg" />
+    <None Include="Resources\FIFA22-PC-REQUIREMENTS-removebg-preview.jpg" />
     <Content Include="Resources\football-ge8782764d_1920.jpg" />
     <None Include="Resources\pngegg1.png" />
     <None Include="Resources\hinh-nen-manchester-united-1.jpg" />
@@ -394,12 +517,17 @@
     <None Include="Resources\jason-charters-IorqsMssQH0-unsplash.jpg" />
     <None Include="Resources\schedule.png" />
     <None Include="Resources\premier-league-2.png" />
-    <None Include="Resources\hinh-nen-san-van-dong-rong-lon_025307024.jpg" />
-    <None Include="Resources\Statement_Graphic_Pink.png" />
-    <None Include="Resources\hinh-anh-nen-san-bong-da-san-van-dong-png-445.jpg" />
-    <None Include="Resources\hinh-anh-nen-san-bong-da-san-van-dong-png-4451.jpg" />
-    <None Include="Resources\hinh-anh-nen-san-bong-da-san-van-dong-png-4452.jpg" />
-    <None Include="Resources\images %283%29.jpg" />
+    <None Include="Resources\soccer_player_30px.png" />
+    <None Include="Resources\soccer_ball_50px.png" />
+    <None Include="Resources\shield_30px.png" />
+    <None Include="Resources\search_20px.png" />
+    <None Include="Resources\schedule_30px.png" />
+    <None Include="Resources\schedule_50px.png" />
+    <None Include="Resources\scorecard_30px.png" />
+    <None Include="Resources\scorecard_50px.png" />
+    <None Include="Resources\leaderboard_30px.png" />
+    <None Include="Resources\images.v3-removebg-preview %281%29-removebg-preview.jpg" />
+    <None Include="Resources\images1.jpg" />
     <Content Include="Resources\Statement_Graphic_PL_Lilac.jpg" />
     <None Include="Resources\t2.png" />
     <None Include="Resources\t3.png" />

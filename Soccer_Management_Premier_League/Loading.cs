@@ -38,11 +38,6 @@ namespace Soccer_Management_Premier_League
                 login.Show();
             }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 

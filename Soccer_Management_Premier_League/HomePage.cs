@@ -15,44 +15,8 @@ namespace Soccer_Management_Premier_League
         public HomePage()
         {
             InitializeComponent();
-            CustomizeDesign();
-        }
-
-        private void CustomizeDesign()
-        {
-            Panel_Club.Visible = false;
-            Panel_MatchSchedule.Visible = false;
-            Panel_Ranking.Visible = false;
-            Panel_Result.Visible = false;
-            Panel_Referee.Visible = false;
             
         }
-        private void hideSubmenu()
-        {
-            if (Panel_Club.Visible == true)
-                Panel_Club.Visible = false;
-            if (Panel_MatchSchedule.Visible == true)
-                Panel_MatchSchedule.Visible = false;
-            if (Panel_Ranking.Visible == true)
-                Panel_Ranking.Visible = false;
-            if (Panel_Result.Visible == true)
-                Panel_Result.Visible = false;
-            if (Panel_Referee.Visible == true)
-                Panel_Referee.Visible = false;
-
-        }
-
-        private void showSubmenu(Panel submenu)
-        {
-            if (submenu.Visible == false)
-            {
-                hideSubmenu();
-                submenu.Visible = true;
-            }
-            else
-                submenu.Visible = false;
-        }
-
 
         private void Btn_exit_Click(object sender, EventArgs e)
         {
@@ -61,27 +25,7 @@ namespace Soccer_Management_Premier_League
 
         private void Btn_Club_Click(object sender, EventArgs e)
         {
-            showSubmenu(Panel_Club);
-        }
-
-        private void Btn_MatchSchedule_Click(object sender, EventArgs e)
-        {
-            showSubmenu(Panel_MatchSchedule);
-        }
-
-        private void Btn_Ranking_Click(object sender, EventArgs e)
-        {
-            showSubmenu(Panel_Ranking);
-        }
-
-        private void Btn_Referee_Click(object sender, EventArgs e)
-        {
-            showSubmenu(Panel_Referee);
-        }
-
-        private void Btn_Result_Click(object sender, EventArgs e)
-        {
-            showSubmenu(Panel_Result);
+            OpenChildForm(new Registration());
         }
 
         private Form activeForm = null;
@@ -100,40 +44,46 @@ namespace Soccer_Management_Premier_League
 
         }
 
-        private void Btn_Registration_Click(object sender, EventArgs e)
-        {
-            
-            OpenChildForm(new Registration());
-            hideSubmenu();
-        }
-
-        private void Btn_ManageClub_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new ManageClub());
-            hideSubmenu();
-        }
-
-        private void Btn_UpdateClub_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             OpenChildForm(new ManagePlayer());
-            hideSubmenu();
         }
 
-        private void Btn_AddMatch_Click(object sender, EventArgs e)
+        private void Btn_MatchSchedule_Click(object sender, EventArgs e)
         {
             OpenChildForm(new AddMatch());
-            hideSubmenu();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ManageMatch());
-            hideSubmenu();
+            Login login = new Login();
+            this.Hide();
+            login.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new AddResult());
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Ranking());
+        }
+
+        private void Btn_exit_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Referee());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Coach());
         }
     }
 }
