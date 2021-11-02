@@ -27,7 +27,7 @@ namespace Soccer_Management_Premier_League
             {
                 string name = text_name.Text;
                 string nationality = text_nation.Text;
-                int type = int.Parse(text_type.Text.ToString());
+                string type = text_type.Text;
                 DateTime dt = date_birth.Value;
 
 

@@ -27,7 +27,7 @@ namespace Soccer_Management_Premier_League
 
         public void LoadPlayers()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-5532VTU;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select C.CLBNAME, PLNAME,NATIONALITY, VITRI,NUMBER, DAY_BORN,P.PIC from FOOTBALL_PLAYER as P,CLUB as C where P.IDCLB = '" + guna2ComboBox1.SelectedValue.ToString() + "' and C.CLBNAME = '" + guna2ComboBox1.Text + "'";

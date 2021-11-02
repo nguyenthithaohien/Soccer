@@ -239,6 +239,12 @@
     <Compile Include="EditCoach.Designer.cs">
       <DependentUpon>EditCoach.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditMatch.Designer.cs">
+      <DependentUpon>EditMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditReferee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -360,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditCoach.resx">
       <DependentUpon>EditCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditMatch.resx">
+      <DependentUpon>EditMatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditReferee.resx">
       <DependentUpon>EditReferee.cs</DependentUpon>

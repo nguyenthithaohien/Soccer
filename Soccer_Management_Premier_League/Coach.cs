@@ -125,10 +125,5 @@ namespace Soccer_Management_Premier_League
                 formBackground.Dispose();
             }
         }
-
-        private void DataGridView_coach_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

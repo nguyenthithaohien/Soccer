@@ -28,7 +28,7 @@ namespace Soccer_Management_Premier_League
                 string name = Name_Txt.Text;
                 string id = ID_Txt.Text;
                 string nationality = Nation_Txt.Text;
-                int type = int.Parse(Type_Txt.Text.ToString());
+                string type = Type_Txt.Text;
                 DateTime dt = Birth_Date.Value;
                 using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
                 {

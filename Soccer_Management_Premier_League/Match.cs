@@ -27,7 +27,7 @@ namespace Soccer_Management_Premier_League
 
         private void GetHomeClub()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-5532VTU;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select CLBNAME from CLUB";
@@ -59,7 +59,7 @@ namespace Soccer_Management_Premier_League
 
         private void GetStadium()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-5532VTU;Initial Catalog=QLDB;Integrated Security=True"))
             {
                 connection.Open();
                 string query = "Select STADIUM from CLUB";
@@ -82,6 +82,7 @@ namespace Soccer_Management_Premier_League
             DateTime ngay = dateTimePicker1.Value;
             DateTime gio = dateTimePicker1.Value;
             string stadium = Stadium_cbx.Text;
+            string idref = IDREF_cbx.Text;
 
             gio.ToShortTimeString();
 
@@ -89,7 +90,7 @@ namespace Soccer_Management_Premier_League
             {
                 connection.Open();
 
-                string query = "insert into MATCH1(CLB1,CLB2, DATE,TIME, STAYDIUM) values(@hostClub,@visitClub,@ngay,@gio,@san)";
+                string query = "insert into MATCH1(CLB1,CLB2, DATE,TIME, STAYDIUM, IDREF) values(@hostClub,@visitClub,@ngay,@gio,@san, @idref)";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
@@ -98,7 +99,7 @@ namespace Soccer_Management_Premier_League
                 command.Parameters.AddWithValue("@ngay", ngay);
                 command.Parameters.AddWithValue("@gio", gio);
                 command.Parameters.AddWithValue("@san", stadium);
-
+                command.Parameters.AddWithValue("@idref", idref);
                 try
                 {
                     command.ExecuteNonQuery();
@@ -130,6 +131,11 @@ namespace Soccer_Management_Premier_League
             }
 
             return hostClub;
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

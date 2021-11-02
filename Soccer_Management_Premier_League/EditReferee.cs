@@ -26,7 +26,7 @@ namespace Soccer_Management_Premier_League
             {
                 string id = text_id.Text;
                 string name = text_name.Text;
-                int type = int.Parse(text_type.Text);
+                string type = text_type.Text;
                 string quocGia = text_nation.Text;
                 DateTime dateTime = date_birth.Value;
 
