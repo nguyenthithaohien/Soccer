@@ -29,6 +29,7 @@ namespace Soccer_Management_Premier_League
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@ namespace Soccer_Management_Premier_League
             this.Player_Ptx = new System.Windows.Forms.PictureBox();
             this.button_delete = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Player_Ptx)).BeginInit();
@@ -268,6 +270,10 @@ namespace Soccer_Management_Premier_League
             this.button_update.UseVisualStyleBackColor = false;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this.panel1;
+            // 
             // Player1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -328,5 +334,6 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         public System.Windows.Forms.PictureBox Player_Ptx;
         public System.Windows.Forms.ComboBox comboBox1;
+        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
     }
 }

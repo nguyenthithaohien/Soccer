@@ -23,7 +23,7 @@ namespace Soccer_Management_Premier_League
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(Verify())
+            if (Verify())
             {
                 string name = Name_Txt.Text;
                 string id = ID_Txt.Text;
@@ -67,7 +67,7 @@ namespace Soccer_Management_Premier_League
 
         private bool Verify()
         {
-            if (ID_Txt.Text == "" || Name_Txt.Text == "" || Nation_Txt.Text == "" || Type_Txt.Text=="")
+            if (ID_Txt.Text == "" || Name_Txt.Text == "" || Nation_Txt.Text == "" || Type_Txt.Text == "")
                 return false;
 
             return true;

@@ -38,9 +38,7 @@ namespace Soccer_Management_Premier_League
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -85,7 +83,7 @@ namespace Soccer_Management_Premier_League
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.label1.Location = new System.Drawing.Point(380, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 38);
+            this.label1.Size = new System.Drawing.Size(85, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "PLAYER";
             // 
@@ -97,7 +95,7 @@ namespace Soccer_Management_Premier_League
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.label7.Location = new System.Drawing.Point(329, 8);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(267, 38);
+            this.label7.Size = new System.Drawing.Size(177, 25);
             this.label7.TabIndex = 0;
             this.label7.Text = "Manage Players";
             // 
@@ -105,9 +103,7 @@ namespace Soccer_Management_Premier_League
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(226)))), ((int)(((byte)(171)))));
             this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.guna2ComboBox1);
             this.panel3.Controls.Add(this.button1);
@@ -127,50 +123,27 @@ namespace Soccer_Management_Premier_League
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.label5.Location = new System.Drawing.Point(806, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 23);
+            this.label5.Size = new System.Drawing.Size(36, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Add";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label4.Location = new System.Drawing.Point(760, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 23);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Del";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label3.Location = new System.Drawing.Point(705, 41);
+            this.label3.Location = new System.Drawing.Point(765, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 23);
+            this.label3.Size = new System.Drawing.Size(32, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Edit";
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::Soccer_Management_Premier_League.Properties.Resources.delete_30px;
-            this.button3.Location = new System.Drawing.Point(754, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(39, 30);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Soccer_Management_Premier_League.Properties.Resources.edit_30px;
-            this.button2.Location = new System.Drawing.Point(702, 9);
+            this.button2.Location = new System.Drawing.Point(762, 9);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(39, 30);
             this.button2.TabIndex = 3;
@@ -217,7 +190,7 @@ namespace Soccer_Management_Premier_League
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.label2.Image = global::Soccer_Management_Premier_League.Properties.Resources.soccer_player_30px;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(12, 14);
+            this.label2.Location = new System.Drawing.Point(2, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 43);
             this.label2.TabIndex = 0;
@@ -258,7 +231,6 @@ namespace Soccer_Management_Premier_League
             this.DataGridView_player.Location = new System.Drawing.Point(0, 45);
             this.DataGridView_player.Name = "DataGridView_player";
             this.DataGridView_player.RowHeadersVisible = false;
-            this.DataGridView_player.RowHeadersWidth = 62;
             this.DataGridView_player.RowTemplate.Height = 80;
             this.DataGridView_player.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView_player.Size = new System.Drawing.Size(850, 542);
@@ -285,10 +257,11 @@ namespace Soccer_Management_Premier_League
             this.DataGridView_player.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DataGridView_player.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DataGridView_player.Click += new System.EventHandler(this.DataGridView_player_Click);
+            this.DataGridView_player.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DataGridView_player_KeyDown);
             // 
             // ManagePlayer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(850, 650);
@@ -323,10 +296,8 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2DataGridView DataGridView_player;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
     }
 }

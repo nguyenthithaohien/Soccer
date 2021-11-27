@@ -24,6 +24,7 @@ namespace Soccer_Management_Premier_League
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
+                string idCoach = tbID.Text;
                 string id = ID_Txt.Text;
                 string name = Name_Txt.Text;
                 string type = Type_Txt.Text;
@@ -31,17 +32,16 @@ namespace Soccer_Management_Premier_League
                 DateTime dateTime = Birth_Date.Value;
 
                 connection.Open();
-                string query = "Update COACH set IDCLB = @id, COACHNAME = @name,NATIONALITY = @quocGia, DAY_BORN = @dateTime, TYPE_COACH = @type where COACHNAME = '" + name + "'";
+                string query = "Update COACH set IDCLB = @id, COACHNAME = @name,NATIONALITY = @quocGia, DAY_BORN = @dateTime, TYPE_COACH = @type where IDCOACH = '" + idCoach + "'";
 
                 SqlCommand command = new SqlCommand(query, connection);
-
 
                 command.Parameters.AddWithValue("@id", id);
                 command.Parameters.AddWithValue("@name", name);
                 command.Parameters.AddWithValue("@quocGia", quocGia);
                 command.Parameters.AddWithValue("@dateTime", dateTime);
                 command.Parameters.AddWithValue("@type", type);
-               
+
                 try
                 {
                     command.ExecuteNonQuery();
@@ -51,35 +51,6 @@ namespace Soccer_Management_Premier_League
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-                }
-            }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Are you sure you want to remove this coach", "Remove Coach", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
-                {
-                    connection.Open();
-
-                    string query = "Delete from COACH where COACHNAME = '" + Name_Txt.Text + "'";
-
-                    SqlCommand command = new SqlCommand(query, connection);
-
-                    try
-                    {
-                        command.ExecuteNonQuery();
-                        MessageBox.Show("Coach Removed", "Remove coach", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        coach.LoadCoach();
-
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-
-                    connection.Close();
                 }
             }
         }

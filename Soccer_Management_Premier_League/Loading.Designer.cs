@@ -52,8 +52,8 @@ namespace Soccer_Management_Premier_League
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Soccer_Management_Premier_League.Properties.Resources.premier_league_2;
-            this.pictureBox1.Location = new System.Drawing.Point(96, -13);
+            this.pictureBox1.Image = global::Soccer_Management_Premier_League.Properties.Resources.FIFA22_PC_REQUIREMENTS_removebg_preview;
+            this.pictureBox1.Location = new System.Drawing.Point(79, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(351, 163);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -65,17 +65,17 @@ namespace Soccer_Management_Premier_League
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.label1.Location = new System.Drawing.Point(51, 153);
+            this.label1.Location = new System.Drawing.Point(102, 168);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(412, 33);
+            this.label1.Size = new System.Drawing.Size(312, 33);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Premier League Management";
+            this.label1.Text = "Football Management";
             // 
             // Loading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(216)))), ((int)(((byte)(115)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(226)))), ((int)(((byte)(171)))));
             this.ClientSize = new System.Drawing.Size(484, 309);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2WinProgressIndicator1);

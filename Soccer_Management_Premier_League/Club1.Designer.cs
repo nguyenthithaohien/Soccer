@@ -29,6 +29,7 @@ namespace Soccer_Management_Premier_League
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -49,8 +50,8 @@ namespace Soccer_Management_Premier_League
             this.label21 = new System.Windows.Forms.Label();
             this.Name_Txt = new System.Windows.Forms.TextBox();
             this.Club_Ptx = new System.Windows.Forms.PictureBox();
-            this.button_delete = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Club_Ptx)).BeginInit();
@@ -262,21 +263,6 @@ namespace Soccer_Management_Premier_League
             this.Club_Ptx.TabIndex = 144;
             this.Club_Ptx.TabStop = false;
             // 
-            // button_delete
-            // 
-            this.button_delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(220)))), ((int)(((byte)(87)))));
-            this.button_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_delete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_delete.ForeColor = System.Drawing.Color.Black;
-            this.button_delete.Location = new System.Drawing.Point(645, 232);
-            this.button_delete.Name = "button_delete";
-            this.button_delete.Size = new System.Drawing.Size(118, 39);
-            this.button_delete.TabIndex = 153;
-            this.button_delete.Text = "Delete";
-            this.button_delete.UseVisualStyleBackColor = false;
-            this.button_delete.Click += new System.EventHandler(this.button_delete_Click);
-            // 
             // button_update
             // 
             this.button_update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -284,7 +270,7 @@ namespace Soccer_Management_Premier_League
             this.button_update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_update.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_update.ForeColor = System.Drawing.Color.Black;
-            this.button_update.Location = new System.Drawing.Point(521, 232);
+            this.button_update.Location = new System.Drawing.Point(645, 232);
             this.button_update.Name = "button_update";
             this.button_update.Size = new System.Drawing.Size(118, 39);
             this.button_update.TabIndex = 152;
@@ -292,13 +278,16 @@ namespace Soccer_Management_Premier_League
             this.button_update.UseVisualStyleBackColor = false;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this.panel1;
+            // 
             // Club1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(766, 278);
-            this.Controls.Add(this.button_delete);
             this.Controls.Add(this.button_update);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.panel1);
@@ -347,7 +336,6 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button button_delete;
         private System.Windows.Forms.Button button_update;
         public System.Windows.Forms.PictureBox Club_Ptx;
         public System.Windows.Forms.TextBox City_Txt;
@@ -357,5 +345,6 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.TextBox Address_Txt;
         public System.Windows.Forms.TextBox ID_Txt;
         public System.Windows.Forms.TextBox Name_Txt;
+        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
     }
 }

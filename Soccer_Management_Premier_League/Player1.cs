@@ -40,11 +40,6 @@ namespace Soccer_Management_Premier_League
                     connection.Open();
 
                     string query = "Delete from FOOTBALL_PLAYER where PLNAME = '" + Name_txt.Text + "'";
-                    //SqlDataAdapter ada = new SqlDataAdapter(query, connection);
-                    //DataTable dt = new DataTable();
-                    //ada.Fill(dt);
-
-                    //DataGridView_club.DataSource = dt;
 
                     SqlCommand command = new SqlCommand(query, connection);
 

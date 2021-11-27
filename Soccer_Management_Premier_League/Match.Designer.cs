@@ -29,6 +29,7 @@ namespace Soccer_Management_Premier_League
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -42,8 +43,7 @@ namespace Soccer_Management_Premier_League
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.IDREF_cbx = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +103,7 @@ namespace Soccer_Management_Premier_League
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(48, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(143, 28);
+            this.label3.Size = new System.Drawing.Size(96, 19);
             this.label3.TabIndex = 0;
             this.label3.Text = "Add Match";
             // 
@@ -113,7 +113,7 @@ namespace Soccer_Management_Premier_League
             this.Stadium_cbx.FormattingEnabled = true;
             this.Stadium_cbx.Location = new System.Drawing.Point(123, 125);
             this.Stadium_cbx.Name = "Stadium_cbx";
-            this.Stadium_cbx.Size = new System.Drawing.Size(193, 38);
+            this.Stadium_cbx.Size = new System.Drawing.Size(193, 29);
             this.Stadium_cbx.TabIndex = 156;
             // 
             // Club_cbx1
@@ -122,7 +122,7 @@ namespace Soccer_Management_Premier_League
             this.Club_cbx1.FormattingEnabled = true;
             this.Club_cbx1.Location = new System.Drawing.Point(561, 71);
             this.Club_cbx1.Name = "Club_cbx1";
-            this.Club_cbx1.Size = new System.Drawing.Size(193, 38);
+            this.Club_cbx1.Size = new System.Drawing.Size(193, 29);
             this.Club_cbx1.TabIndex = 155;
             // 
             // Club_cbx
@@ -131,7 +131,7 @@ namespace Soccer_Management_Premier_League
             this.Club_cbx.FormattingEnabled = true;
             this.Club_cbx.Location = new System.Drawing.Point(123, 75);
             this.Club_cbx.Name = "Club_cbx";
-            this.Club_cbx.Size = new System.Drawing.Size(193, 38);
+            this.Club_cbx.Size = new System.Drawing.Size(193, 29);
             this.Club_cbx.TabIndex = 154;
             // 
             // label10
@@ -140,7 +140,7 @@ namespace Soccer_Management_Premier_League
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(5, 128);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(124, 30);
+            this.label10.Size = new System.Drawing.Size(83, 21);
             this.label10.TabIndex = 153;
             this.label10.Text = "Stadium :";
             // 
@@ -151,7 +151,7 @@ namespace Soccer_Management_Premier_League
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(561, 121);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(193, 37);
+            this.dateTimePicker1.Size = new System.Drawing.Size(193, 27);
             this.dateTimePicker1.TabIndex = 152;
             // 
             // label14
@@ -161,7 +161,7 @@ namespace Soccer_Management_Premier_League
             this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label14.Location = new System.Drawing.Point(458, 79);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(148, 30);
+            this.label14.Size = new System.Drawing.Size(96, 21);
             this.label14.TabIndex = 151;
             this.label14.Text = "Visit Team :";
             // 
@@ -171,7 +171,7 @@ namespace Soccer_Management_Premier_League
             this.label13.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(462, 128);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(85, 30);
+            this.label13.Size = new System.Drawing.Size(58, 21);
             this.label13.TabIndex = 150;
             this.label13.Text = "Date :";
             // 
@@ -181,38 +181,20 @@ namespace Soccer_Management_Premier_League
             this.label17.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(5, 79);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(173, 30);
+            this.label17.Size = new System.Drawing.Size(112, 21);
             this.label17.TabIndex = 149;
             this.label17.Text = "Home Team :";
             // 
-            // IDREF_cbx
+            // guna2DragControl1
             // 
-            this.IDREF_cbx.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDREF_cbx.FormattingEnabled = true;
-            this.IDREF_cbx.Location = new System.Drawing.Point(123, 177);
-            this.IDREF_cbx.Name = "IDREF_cbx";
-            this.IDREF_cbx.Size = new System.Drawing.Size(193, 38);
-            this.IDREF_cbx.TabIndex = 158;
-            this.IDREF_cbx.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 180);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 30);
-            this.label1.TabIndex = 157;
-            this.label1.Text = "IDREF :";
+            this.guna2DragControl1.TargetControl = this.panel1;
             // 
             // Match
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(766, 227);
-            this.Controls.Add(this.IDREF_cbx);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Stadium_cbx);
             this.Controls.Add(this.Club_cbx1);
             this.Controls.Add(this.Club_cbx);
@@ -253,7 +235,6 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox IDREF_cbx;
-        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

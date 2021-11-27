@@ -21,8 +21,7 @@ namespace Soccer_Management_Premier_League
 
             result = rs;
 
-            GetPlayer();
-            GetAssistant();
+           
         }
 
         private void GetAssistant()
@@ -31,13 +30,14 @@ namespace Soccer_Management_Premier_League
             {
                 connection.Open();
 
-                string query = "Select PLNAME from FOOTBALL_PLAYER";
+                string query = "Select PLNAME from FOOTBALL_PLAYER where IDCLB = '" + IDCLB.Text + "' order by PLNAME";
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
                 DataSet ds = new DataSet();
                 ada.Fill(ds);
 
                 Assistant_cbx.DataSource = ds.Tables[0];
                 Assistant_cbx.DisplayMember = "PLNAME";
+                Assistant_cbx.SelectedIndex = -1;
             }
         }
 
@@ -47,7 +47,7 @@ namespace Soccer_Management_Premier_League
             {
                 connection.Open();
 
-                string query = "Select PLNAME from FOOTBALL_PLAYER";
+                string query = "Select PLNAME from FOOTBALL_PLAYER where IDCLB = '"+ IDCLB.Text + "' order by PLNAME";
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
                 DataSet ds = new DataSet();
                 ada.Fill(ds);
@@ -65,14 +65,29 @@ namespace Soccer_Management_Premier_League
                 string insertQuery = "insert into GOAL(IDPL, IDCLB, IDMATCH,TIME_GOAL,IDPLA,TIME_ASSIST) values(@idpl, @idclb, @idmatch, @time_goal,@idpla,@time_assist)";
                 SqlCommand sqlCommand = new SqlCommand(insertQuery, connection);
 
+                if(Assistant_cbx.SelectedIndex == -1)
+                {
+                    Assistant_cbx.Text = "";
+                }
+
                 sqlCommand.Parameters.AddWithValue("@idpl", GetIDPlayer(Player_cbx.Text));
                 sqlCommand.Parameters.AddWithValue("@idclb", IDCLB.Text);
                 sqlCommand.Parameters.AddWithValue("@idmatch", result.ID_txt.Text);
                 sqlCommand.Parameters.AddWithValue("@time_goal", int.Parse(Time_txt.Text));
-                sqlCommand.Parameters.AddWithValue("@idpla", GetIDPlayer(Assistant_cbx.Text));
+
+                if (Assistant_cbx.SelectedIndex == -1)
+                {
+                    sqlCommand.Parameters.AddWithValue("@idpla", "");
+                }
+                else
+                {
+                    sqlCommand.Parameters.AddWithValue("@idpla", GetIDPlayer(Assistant_cbx.Text));
+                }
+
                 sqlCommand.Parameters.AddWithValue("@time_assist", int.Parse(Time_txt.Text));
 
                 string query1 = "Update FOOTBALL_PLAYER set SCORE = SCORE + 1 where PLNAME = '"+ Player_cbx.Text + "'";
+
                 string query2 = "Update FOOTBALL_PLAYER set ASSISS = ASSISS + 1 where PLNAME = '" + Assistant_cbx.Text + "'";
 
                 SqlCommand sqlCommand1 = new SqlCommand(query1, connection);
@@ -82,7 +97,7 @@ namespace Soccer_Management_Premier_League
                 {
                     sqlCommand.ExecuteNonQuery();
                     sqlCommand1.ExecuteNonQuery();
-                    sqlCommand2.ExecuteNonQuery();
+                    //sqlCommand2.ExecuteNonQuery();
                     MessageBox.Show("Add successfully");
                     connection.Close();
                 }
@@ -115,6 +130,12 @@ namespace Soccer_Management_Premier_League
             }
 
             return id;
+        }
+
+        private void Score_Load(object sender, EventArgs e)
+        {
+            GetPlayer();
+            GetAssistant();
         }
     }
 }

@@ -23,11 +23,11 @@ namespace Soccer_Management_Premier_League
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(Verify())
+            if (Verify())
             {
                 string name = text_name.Text;
                 string nationality = text_nation.Text;
-                string type = text_type.Text;
+                string type = cbType.SelectedItem.ToString();
                 DateTime dt = date_birth.Value;
 
 
@@ -67,7 +67,7 @@ namespace Soccer_Management_Premier_League
 
         private bool Verify()
         {
-            if (text_name.Text == "" || text_nation.Text == "" || text_type.Text == "")
+            if (text_name.Text == "" || text_nation.Text == "" || cbType.Text == "")
                 return false;
             return true;
         }
@@ -76,7 +76,7 @@ namespace Soccer_Management_Premier_League
         {
             text_name.Text = "";
             text_nation.Text = "";
-            text_type.Text = "";
+            cbType.Text = "";
         }
     }
 }

@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Soccer_Management_Premier_League
 {
@@ -19,12 +14,11 @@ namespace Soccer_Management_Premier_League
         {
             InitializeComponent();
             addResult = ar;
+            pictureBox1.Enabled = false;
+            pictureBox3.Enabled = false;
         }
 
-        private void Result_Load(object sender, EventArgs e)
-        {
-            //LoadMatch();
-        }
+
         public string GetID(string text)
         {
             string hostClub;
@@ -62,6 +56,7 @@ namespace Soccer_Management_Premier_League
                     UpdateGD(GetID(Club_cbx.Text));
                     UpdateRanking(score2, score1, GetID(Club_cbx1.Text));
                     UpdateGD(GetID(Club_cbx1.Text));
+                    addResult.LoadResult();
                 }
                 catch (Exception ex)
                 {
@@ -102,7 +97,7 @@ namespace Soccer_Management_Premier_League
                     }
                 }
             }
-            else if(score1 > score2)
+            else if (score1 > score2)
             {
                 using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
                 {
@@ -191,6 +186,42 @@ namespace Soccer_Management_Premier_League
             //this.Dispose();
         }
 
+        //public void Check()
+        //{
+        //    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+        //    {
+        //        connection.Open();
+        //        string query = "Select SCORED1 from MATCH1 where IDMatch = '" + ID_txt.Text + "'";
+
+        //        SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+        //        DataTable dt = new DataTable();
+        //        ada.Fill(dt);
+
+        //        try
+        //        {
+        //            if (dt.Rows.Count == 0)
+        //            {
+        //                pictureBox1.Enabled = false;
+        //            }
+        //            else
+        //            {
+        //                pictureBox1.Enabled = true;
+        //            }
+
+        //            connection.Close();
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            MessageBox.Show(ex.Message);
+        //        }
+        //        finally
+        //        {
+        //            connection.Close();
+        //        }
+        //    }
+
+        //    //return true;
+        //}
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Form formBackground = new Form();
@@ -284,6 +315,31 @@ namespace Soccer_Management_Premier_League
             finally
             {
                 formBackground.Dispose();
+            }
+        }
+
+        private void Score1_txt_TextChanged(object sender, EventArgs e)
+        {
+            //Check();
+            if (Score1_txt.Text == "")
+            {
+                pictureBox1.Enabled = false;
+            }
+            else
+            {
+                pictureBox1.Enabled = true;
+            }
+        }
+
+        private void Score2_txt_TextChanged(object sender, EventArgs e)
+        {
+            if (Score2_txt.Text == "")
+            {
+                pictureBox3.Enabled = false;
+            }
+            else
+            {
+                pictureBox3.Enabled = true;
             }
         }
     }

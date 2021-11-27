@@ -19,13 +19,46 @@ namespace Soccer_Management_Premier_League
             InitializeComponent();
             GetHomeClub();
             GetVisitClub();
+            GetStadium();
+            GetReferee();
             add = edit;
+        }
+
+        private void GetReferee()
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "Select REF_NAME,IDREF from REFEREE";
+                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                DataSet ds = new DataSet();
+                ada.Fill(ds);
+
+                IDREF_cbx.DataSource = ds.Tables[0];
+                IDREF_cbx.DisplayMember = "REF_NAME";
+                IDREF_cbx.ValueMember = "IDREF";
+                IDREF_cbx.SelectedIndex = -1;
+            }
+        }
+
+        private void GetStadium()
+        {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+            {
+                connection.Open();
+                string query = "Select STADIUM from CLUB";
+                SqlDataAdapter ada = new SqlDataAdapter(query, connection);
+                DataSet ds = new DataSet();
+                ada.Fill(ds);
+
+                Stadium_cbx.DataSource = ds.Tables[0];
+                Stadium_cbx.DisplayMember = "STADIUM";
+            }
         }
 
         private void GetHomeClub()
         {
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-5532VTU;Initial Catalog=QLDB;Integrated Security=True"))
-            {
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True")) { 
                 connection.Open();
                 string query = "Select CLBNAME from CLUB";
                 SqlDataAdapter ada = new SqlDataAdapter(query, connection);
@@ -79,8 +112,8 @@ namespace Soccer_Management_Premier_League
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
-                string idmatch = IDMATCH_cbx.Text;
-                string idref = IDREF_cbx.Text;
+                string idmatch = tbIDMatch.Text;
+                string idref = IDREF_cbx.SelectedValue.ToString();
                 string hostClub = GetID(Club_cbx.Text);
                 string visitClub = GetID(Club_cbx1.Text);
                 DateTime ngay = dateTimePicker1.Value;
@@ -120,7 +153,7 @@ namespace Soccer_Management_Premier_League
                 {
                     connection.Open();
 
-                    string query = "Delete from MATCH1 where IDMATCH = '" + IDMATCH_cbx.Text + "'";
+                    string query = "Delete from MATCH1 where IDMATCH = '" + tbIDMatch.Text + "'";
 
 
                     SqlCommand command = new SqlCommand(query, connection);
@@ -129,7 +162,7 @@ namespace Soccer_Management_Premier_League
                     {
                         command.ExecuteNonQuery();
                         MessageBox.Show("Match Removed", "Remove match", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        add.LoadMatchs(); 
+                        add.LoadMatchs();
                     }
                     catch (Exception ex)
                     {
@@ -139,6 +172,11 @@ namespace Soccer_Management_Premier_League
                     connection.Close();
                 }
             }
+        }
+
+        private void EditMatch_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -196,8 +196,14 @@
   <data name="WAT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WAT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="audio_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BRE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BRE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2705_fifa-22-release-date" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2705_fifa-22-release-date.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="shield_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shield_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,8 +214,8 @@
   <data name="WHU" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WHU.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2705_fifa-22-release-date" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2705_fifa-22-release-date.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="soccer_ball_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soccer_ball_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bruno" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bruno.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,6 +228,9 @@
   </data>
   <data name="NEW" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NEW.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nhan-dinh-soi-keo-pordenone-vs-spezia-coppa-italia-202122" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nhan-dinh-soi-keo-pordenone-vs-spezia-coppa-italia-202122.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,6 +328,9 @@
   <data name="pngegg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngegg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="referee_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\referee_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="AVL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AVL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -342,6 +354,9 @@
   </data>
   <data name="WOL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WOL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="referee_30px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\referee_30px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -369,6 +384,9 @@
   </data>
   <data name="ronaldo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ronaldo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whistle_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\whistle_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="t45" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\t45.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -406,8 +424,8 @@
   <data name="6368983829074168033" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6368983829074168033.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="images2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\images1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stadium_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stadium_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="images.v3-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\images.v3-removebg-preview.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -424,7 +442,7 @@
   <data name="CHEL" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CHEL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="2561427_edit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2561427_edit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coach_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coach_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

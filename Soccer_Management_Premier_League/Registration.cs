@@ -76,7 +76,7 @@ namespace Soccer_Management_Premier_League
                 formBackground.Opacity = .50d;
                 formBackground.BackColor = Color.Black;
                 formBackground.WindowState = FormWindowState.Maximized;
-                formBackground.TopMost = true;
+                //formBackground.TopMost = true;
                 formBackground.Location = this.Location;
                 formBackground.ShowInTaskbar = false;
                 formBackground.Show();
@@ -150,6 +150,33 @@ namespace Soccer_Management_Premier_League
             LoadClubs();
         }
 
+        private void DataGridView_club_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Delete)
+            {
+                if (MessageBox.Show("Are you sure you want to remove this club", "Remove club", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+                    {
+                        connection.Open();
+                        string query = "Delete from CLUB where CLBID = '" + DataGridView_club.CurrentRow.Cells[0].Value.ToString() + "'";
 
+                        SqlCommand command = new SqlCommand(query, connection);
+
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Club Removed", "Remove club", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadClubs();
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

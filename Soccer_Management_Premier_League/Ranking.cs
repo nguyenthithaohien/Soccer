@@ -80,7 +80,5 @@ namespace Soccer_Management_Premier_League
                 connection.Close();
             }
         }
-
-
     }
 }

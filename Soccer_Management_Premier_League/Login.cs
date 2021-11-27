@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Soccer_Management_Premier_League
 {
@@ -19,12 +20,31 @@ namespace Soccer_Management_Premier_League
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            if(UserTextbox.Text == "admin" && PassTextbox.Text == "123")
+            SqlConnection Connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True");
+            SqlDataAdapter da = new SqlDataAdapter("select * from account where USERNAME = N'" + UserTextbox.Text + "' and PASS = N'" + PassTextbox.Text + "'", Connection);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
             {
-                HomePage hp = new HomePage();
+                HomePage home = new HomePage();
                 this.Hide();
-                hp.Show();
+                home.Show();
             }
+            else MessageBox.Show("Your Username or Password is incorrect \nPlease try again!", "NOTICE", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void ForgotPass_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgot = new ForgotPassword();
+            this.Hide();
+            forgot.Show();
+        }
+
+        private void SignUpButton_Click(object sender, EventArgs e)
+        {
+            Signup signup = new Signup();
+            this.Hide();
+            signup.Show();
         }
     }
 }

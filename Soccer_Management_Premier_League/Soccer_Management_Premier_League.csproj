@@ -154,6 +154,9 @@
     <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.2.2.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>C:\Users\USER\Downloads\Guna.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.2.3, Culture=neutral, PublicKeyToken=e4b9cdd7b4cde4b4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.2.3\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
@@ -166,8 +169,10 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -325,6 +330,18 @@
     <Compile Include="Result.Designer.cs">
       <DependentUpon>Result.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResultDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultDetail.Designer.cs">
+      <DependentUpon>ResultDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ResultDetail1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResultDetail1.Designer.cs">
+      <DependentUpon>ResultDetail1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Score.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,6 +436,12 @@
     <EmbeddedResource Include="Result.resx">
       <DependentUpon>Result.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ResultDetail.resx">
+      <DependentUpon>ResultDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ResultDetail1.resx">
+      <DependentUpon>ResultDetail1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Score.resx">
       <DependentUpon>Score.cs</DependentUpon>
     </EmbeddedResource>
@@ -454,6 +477,7 @@
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
     <Content Include="Resources\139-1391483_png-file-svg-back-button-icon-png-transparent.png" />
+    <None Include="Resources\whistle_30px.png" />
     <None Include="Resources\WOL.png" />
     <None Include="Resources\WHU.png" />
     <None Include="Resources\WAT.png" />
@@ -485,7 +509,7 @@
     <None Include="Resources\2705_fifa-22-release-date.jpg" />
     <None Include="Resources\2705_fifa-22-release-date1.jpg" />
     <None Include="Resources\add_16px.png" />
-    <None Include="Resources\2561427_edit_icon.png" />
+    <None Include="Resources\audio_30px.png" />
     <Content Include="Resources\close_window_30px.png" />
     <None Include="Resources\edit_30px.png" />
     <None Include="Resources\delete_user_male_30px.png" />
@@ -493,6 +517,7 @@
     <None Include="Resources\FIFA22-PC-REQUIREMENTS.jpg" />
     <None Include="Resources\FIFA22-PC-REQUIREMENTS1.jpg" />
     <None Include="Resources\FIFA22-PC-REQUIREMENTS-removebg-preview.jpg" />
+    <None Include="Resources\coach_30px.png" />
     <Content Include="Resources\football-ge8782764d_1920.jpg" />
     <None Include="Resources\pngegg1.png" />
     <None Include="Resources\hinh-nen-manchester-united-1.jpg" />
@@ -537,6 +562,10 @@
     <None Include="Resources\leaderboard_30px.png" />
     <None Include="Resources\images.v3-removebg-preview %281%29-removebg-preview.jpg" />
     <None Include="Resources\images1.jpg" />
+    <None Include="Resources\stadium_30px.png" />
+    <None Include="Resources\soccer_ball_30px.png" />
+    <None Include="Resources\referee_30px.png" />
+    <None Include="Resources\referee_30px1.png" />
     <Content Include="Resources\Statement_Graphic_PL_Lilac.jpg" />
     <None Include="Resources\t2.png" />
     <None Include="Resources\t3.png" />

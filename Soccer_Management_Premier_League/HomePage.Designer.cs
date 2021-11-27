@@ -67,6 +67,7 @@ namespace Soccer_Management_Premier_League
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -181,6 +182,7 @@ namespace Soccer_Management_Premier_League
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(0, 610);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -338,7 +340,7 @@ namespace Soccer_Management_Premier_League
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
             this.label4.Location = new System.Drawing.Point(122, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 30);
+            this.label4.Size = new System.Drawing.Size(62, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Admin";
             // 
@@ -349,7 +351,7 @@ namespace Soccer_Management_Premier_League
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
             this.label3.Location = new System.Drawing.Point(122, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 30);
+            this.label3.Size = new System.Drawing.Size(52, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Hung";
             // 
@@ -360,7 +362,7 @@ namespace Soccer_Management_Premier_League
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
             this.label2.Location = new System.Drawing.Point(65, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 30);
+            this.label2.Size = new System.Drawing.Size(51, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Role :";
             // 
@@ -371,7 +373,7 @@ namespace Soccer_Management_Premier_League
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(8)))), ((int)(((byte)(58)))));
             this.label1.Location = new System.Drawing.Point(25, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 30);
+            this.label1.Size = new System.Drawing.Size(91, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome :";
             // 
@@ -624,6 +626,10 @@ namespace Soccer_Management_Premier_League
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this.panel4;
+            // 
             // HomePage
             // 
             this.BackColor = System.Drawing.Color.White;
@@ -711,5 +717,6 @@ namespace Soccer_Management_Premier_League
         private System.Windows.Forms.Button Btn_exit;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
     }
 }

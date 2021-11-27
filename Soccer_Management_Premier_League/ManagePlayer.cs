@@ -87,6 +87,7 @@ namespace Soccer_Management_Premier_League
         private void button1_Click_1(object sender, EventArgs e)
         {
             Form formBackground = new Form();
+
             try
             {
                 Player form1 = new Player(this);
@@ -265,6 +266,33 @@ namespace Soccer_Management_Premier_League
             }
         }
 
+        private void DataGridView_player_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                if (MessageBox.Show("Are you sure you want to remove this player", "Remove player", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
+                    {
+                        connection.Open();
+                        string query = "Delete from FOOTBALL_PLAYER where PLNAME = '" + DataGridView_player.CurrentRow.Cells[1].Value.ToString() + "'";
 
+                        SqlCommand command = new SqlCommand(query, connection);
+
+                        try
+                        {
+                            command.ExecuteNonQuery();
+                            MessageBox.Show("Player Removed", "Remove player", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadPlayers();
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

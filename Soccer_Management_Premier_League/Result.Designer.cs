@@ -29,6 +29,7 @@ namespace Soccer_Management_Premier_League
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -50,6 +51,7 @@ namespace Soccer_Management_Premier_League
             this.ID_txt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -232,6 +234,7 @@ namespace Soccer_Management_Premier_League
             this.Score1_txt.Name = "Score1_txt";
             this.Score1_txt.Size = new System.Drawing.Size(193, 21);
             this.Score1_txt.TabIndex = 159;
+            this.Score1_txt.TextChanged += new System.EventHandler(this.Score1_txt_TextChanged);
             // 
             // Score2_txt
             // 
@@ -240,6 +243,7 @@ namespace Soccer_Management_Premier_League
             this.Score2_txt.Name = "Score2_txt";
             this.Score2_txt.Size = new System.Drawing.Size(193, 21);
             this.Score2_txt.TabIndex = 160;
+            this.Score2_txt.TextChanged += new System.EventHandler(this.Score2_txt_TextChanged);
             // 
             // label4
             // 
@@ -283,6 +287,10 @@ namespace Soccer_Management_Premier_League
             this.pictureBox3.TabIndex = 164;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // gunaDragControl1
+            // 
+            this.gunaDragControl1.TargetControl = this.panel1;
             // 
             // Result
             // 
@@ -348,5 +356,6 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.TextBox ID_txt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
     }
 }

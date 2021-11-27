@@ -30,31 +30,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.UserLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ChooseUser = new Guna.UI2.WinForms.Guna2ComboBox();
             this.UserTextbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.PassTextbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.PassLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.UserPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.UserLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.PassTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.PassPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.LoginButton = new Guna.UI2.WinForms.Guna2Button();
+            this.PassLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.ForgotPass = new Guna.UI2.WinForms.Guna2Button();
             this.PassCheck = new Guna.UI2.WinForms.Guna2CheckBox();
             this.SignUpButton = new Guna.UI2.WinForms.Guna2Button();
-            this.ForgotPass = new Guna.UI2.WinForms.Guna2Button();
-            this.ChooseUser = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.LoginButton = new Guna.UI2.WinForms.Guna2Button();
             this.UserPanel.SuspendLayout();
             this.PassPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // UserLabel
+            // ChooseUser
             // 
-            this.UserLabel.BackColor = System.Drawing.Color.Transparent;
-            this.UserLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserLabel.ForeColor = System.Drawing.Color.White;
-            this.UserLabel.Location = new System.Drawing.Point(3, 3);
-            this.UserLabel.Name = "UserLabel";
-            this.UserLabel.Size = new System.Drawing.Size(51, 26);
-            this.UserLabel.TabIndex = 0;
-            this.UserLabel.Text = "User:";
+            this.ChooseUser.BackColor = System.Drawing.Color.Transparent;
+            this.ChooseUser.BorderRadius = 5;
+            this.ChooseUser.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ChooseUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ChooseUser.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ChooseUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ChooseUser.FocusedState.Parent = this.ChooseUser;
+            this.ChooseUser.Font = new System.Drawing.Font("Times New Roman", 9.75F);
+            this.ChooseUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.ChooseUser.HoverState.Parent = this.ChooseUser;
+            this.ChooseUser.ItemHeight = 30;
+            this.ChooseUser.Items.AddRange(new object[] {
+            "User",
+            "Admin"});
+            this.ChooseUser.ItemsAppearance.Parent = this.ChooseUser;
+            this.ChooseUser.Location = new System.Drawing.Point(775, 12);
+            this.ChooseUser.Name = "ChooseUser";
+            this.ChooseUser.ShadowDecoration.Parent = this.ChooseUser;
+            this.ChooseUser.Size = new System.Drawing.Size(97, 36);
+            this.ChooseUser.TabIndex = 10;
             // 
             // UserTextbox
             // 
@@ -74,7 +86,7 @@
             this.UserTextbox.ForeColor = System.Drawing.Color.Black;
             this.UserTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.UserTextbox.HoverState.Parent = this.UserTextbox;
-            this.UserTextbox.Location = new System.Drawing.Point(5, 37);
+            this.UserTextbox.Location = new System.Drawing.Point(5, 5);
             this.UserTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.UserTextbox.Name = "UserTextbox";
             this.UserTextbox.PasswordChar = '\0';
@@ -83,6 +95,26 @@
             this.UserTextbox.ShadowDecoration.Parent = this.UserTextbox;
             this.UserTextbox.Size = new System.Drawing.Size(457, 34);
             this.UserTextbox.TabIndex = 1;
+            // 
+            // UserPanel
+            // 
+            this.UserPanel.BackColor = System.Drawing.Color.Transparent;
+            this.UserPanel.Controls.Add(this.UserTextbox);
+            this.UserPanel.Location = new System.Drawing.Point(216, 242);
+            this.UserPanel.Name = "UserPanel";
+            this.UserPanel.Size = new System.Drawing.Size(465, 79);
+            this.UserPanel.TabIndex = 4;
+            // 
+            // UserLabel
+            // 
+            this.UserLabel.BackColor = System.Drawing.Color.Transparent;
+            this.UserLabel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserLabel.ForeColor = System.Drawing.Color.White;
+            this.UserLabel.Location = new System.Drawing.Point(3, 3);
+            this.UserLabel.Name = "UserLabel";
+            this.UserLabel.Size = new System.Drawing.Size(51, 26);
+            this.UserLabel.TabIndex = 0;
+            this.UserLabel.Text = "User:";
             // 
             // PassTextbox
             // 
@@ -102,7 +134,7 @@
             this.PassTextbox.ForeColor = System.Drawing.Color.Black;
             this.PassTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.PassTextbox.HoverState.Parent = this.PassTextbox;
-            this.PassTextbox.Location = new System.Drawing.Point(5, 37);
+            this.PassTextbox.Location = new System.Drawing.Point(5, 5);
             this.PassTextbox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.PassTextbox.Name = "PassTextbox";
             this.PassTextbox.PasswordChar = '\0';
@@ -112,6 +144,15 @@
             this.PassTextbox.Size = new System.Drawing.Size(457, 34);
             this.PassTextbox.TabIndex = 3;
             this.PassTextbox.UseSystemPasswordChar = true;
+            // 
+            // PassPanel
+            // 
+            this.PassPanel.BackColor = System.Drawing.Color.Transparent;
+            this.PassPanel.Controls.Add(this.PassTextbox);
+            this.PassPanel.Location = new System.Drawing.Point(216, 327);
+            this.PassPanel.Name = "PassPanel";
+            this.PassPanel.Size = new System.Drawing.Size(465, 80);
+            this.PassPanel.TabIndex = 5;
             // 
             // PassLabel
             // 
@@ -124,48 +165,28 @@
             this.PassLabel.TabIndex = 2;
             this.PassLabel.Text = "Password:";
             // 
-            // UserPanel
+            // ForgotPass
             // 
-            this.UserPanel.BackColor = System.Drawing.Color.Transparent;
-            this.UserPanel.Controls.Add(this.UserLabel);
-            this.UserPanel.Controls.Add(this.UserTextbox);
-            this.UserPanel.Location = new System.Drawing.Point(216, 242);
-            this.UserPanel.Name = "UserPanel";
-            this.UserPanel.Size = new System.Drawing.Size(465, 79);
-            this.UserPanel.TabIndex = 4;
-            // 
-            // PassPanel
-            // 
-            this.PassPanel.BackColor = System.Drawing.Color.Transparent;
-            this.PassPanel.Controls.Add(this.PassLabel);
-            this.PassPanel.Controls.Add(this.PassTextbox);
-            this.PassPanel.Location = new System.Drawing.Point(216, 327);
-            this.PassPanel.Name = "PassPanel";
-            this.PassPanel.Size = new System.Drawing.Size(465, 80);
-            this.PassPanel.TabIndex = 5;
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.BackColor = System.Drawing.Color.Transparent;
-            this.LoginButton.CheckedState.Parent = this.LoginButton;
-            this.LoginButton.CustomImages.Parent = this.LoginButton;
-            this.LoginButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.LoginButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.LoginButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.LoginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.LoginButton.DisabledState.Parent = this.LoginButton;
-            this.LoginButton.FillColor = System.Drawing.Color.DarkCyan;
-            this.LoginButton.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.HoverState.Parent = this.LoginButton;
-            this.LoginButton.Location = new System.Drawing.Point(392, 413);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.ShadowDecoration.Parent = this.LoginButton;
-            this.LoginButton.Size = new System.Drawing.Size(111, 36);
-            this.LoginButton.TabIndex = 6;
-            this.LoginButton.Text = "LOGIN";
-            this.LoginButton.UseTransparentBackground = true;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            this.ForgotPass.BackColor = System.Drawing.Color.Transparent;
+            this.ForgotPass.CheckedState.Parent = this.ForgotPass;
+            this.ForgotPass.CustomImages.Parent = this.ForgotPass;
+            this.ForgotPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ForgotPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ForgotPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ForgotPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ForgotPass.DisabledState.Parent = this.ForgotPass;
+            this.ForgotPass.FillColor = System.Drawing.Color.Transparent;
+            this.ForgotPass.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForgotPass.ForeColor = System.Drawing.Color.White;
+            this.ForgotPass.HoverState.Parent = this.ForgotPass;
+            this.ForgotPass.Location = new System.Drawing.Point(561, 413);
+            this.ForgotPass.Name = "ForgotPass";
+            this.ForgotPass.ShadowDecoration.Parent = this.ForgotPass;
+            this.ForgotPass.Size = new System.Drawing.Size(117, 29);
+            this.ForgotPass.TabIndex = 9;
+            this.ForgotPass.Text = "Forgot Password?";
+            this.ForgotPass.UseTransparentBackground = true;
+            this.ForgotPass.Click += new System.EventHandler(this.ForgotPass_Click);
             // 
             // PassCheck
             // 
@@ -212,51 +233,30 @@
             this.SignUpButton.TabIndex = 8;
             this.SignUpButton.Text = "SIGN UP";
             this.SignUpButton.UseTransparentBackground = true;
+            this.SignUpButton.Click += new System.EventHandler(this.SignUpButton_Click);
             // 
-            // ForgotPass
+            // LoginButton
             // 
-            this.ForgotPass.BackColor = System.Drawing.Color.Transparent;
-            this.ForgotPass.CheckedState.Parent = this.ForgotPass;
-            this.ForgotPass.CustomImages.Parent = this.ForgotPass;
-            this.ForgotPass.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.ForgotPass.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.ForgotPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.ForgotPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.ForgotPass.DisabledState.Parent = this.ForgotPass;
-            this.ForgotPass.FillColor = System.Drawing.Color.Transparent;
-            this.ForgotPass.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForgotPass.ForeColor = System.Drawing.Color.White;
-            this.ForgotPass.HoverState.Parent = this.ForgotPass;
-            this.ForgotPass.Location = new System.Drawing.Point(561, 413);
-            this.ForgotPass.Name = "ForgotPass";
-            this.ForgotPass.ShadowDecoration.Parent = this.ForgotPass;
-            this.ForgotPass.Size = new System.Drawing.Size(117, 29);
-            this.ForgotPass.TabIndex = 9;
-            this.ForgotPass.Text = "Forgot Password?";
-            this.ForgotPass.UseTransparentBackground = true;
-            // 
-            // ChooseUser
-            // 
-            this.ChooseUser.BackColor = System.Drawing.Color.Transparent;
-            this.ChooseUser.BorderRadius = 5;
-            this.ChooseUser.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChooseUser.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChooseUser.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChooseUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ChooseUser.FocusedState.Parent = this.ChooseUser;
-            this.ChooseUser.Font = new System.Drawing.Font("Times New Roman", 9.75F);
-            this.ChooseUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.ChooseUser.HoverState.Parent = this.ChooseUser;
-            this.ChooseUser.ItemHeight = 30;
-            this.ChooseUser.Items.AddRange(new object[] {
-            "User",
-            "Admin"});
-            this.ChooseUser.ItemsAppearance.Parent = this.ChooseUser;
-            this.ChooseUser.Location = new System.Drawing.Point(775, 12);
-            this.ChooseUser.Name = "ChooseUser";
-            this.ChooseUser.ShadowDecoration.Parent = this.ChooseUser;
-            this.ChooseUser.Size = new System.Drawing.Size(97, 36);
-            this.ChooseUser.TabIndex = 10;
+            this.LoginButton.BackColor = System.Drawing.Color.Transparent;
+            this.LoginButton.CheckedState.Parent = this.LoginButton;
+            this.LoginButton.CustomImages.Parent = this.LoginButton;
+            this.LoginButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.LoginButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.LoginButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.LoginButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.LoginButton.DisabledState.Parent = this.LoginButton;
+            this.LoginButton.FillColor = System.Drawing.Color.DarkCyan;
+            this.LoginButton.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.Color.White;
+            this.LoginButton.HoverState.Parent = this.LoginButton;
+            this.LoginButton.Location = new System.Drawing.Point(392, 413);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.ShadowDecoration.Parent = this.LoginButton;
+            this.LoginButton.Size = new System.Drawing.Size(111, 36);
+            this.LoginButton.TabIndex = 6;
+            this.LoginButton.Text = "LOGIN";
+            this.LoginButton.UseTransparentBackground = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // Login
             // 
@@ -279,9 +279,7 @@
             this.Name = "Login";
             this.Text = "Premier League Manager";
             this.UserPanel.ResumeLayout(false);
-            this.UserPanel.PerformLayout();
             this.PassPanel.ResumeLayout(false);
-            this.PassPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,17 +287,17 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2HtmlLabel UserLabel;
+        private Guna.UI2.WinForms.Guna2ComboBox ChooseUser;
         private Guna.UI2.WinForms.Guna2TextBox UserTextbox;
-        private Guna.UI2.WinForms.Guna2TextBox PassTextbox;
-        private Guna.UI2.WinForms.Guna2HtmlLabel PassLabel;
         private System.Windows.Forms.FlowLayoutPanel UserPanel;
+        private Guna.UI2.WinForms.Guna2HtmlLabel UserLabel;
+        private Guna.UI2.WinForms.Guna2TextBox PassTextbox;
         private System.Windows.Forms.FlowLayoutPanel PassPanel;
-        private Guna.UI2.WinForms.Guna2Button LoginButton;
+        private Guna.UI2.WinForms.Guna2HtmlLabel PassLabel;
+        private Guna.UI2.WinForms.Guna2Button ForgotPass;
         private Guna.UI2.WinForms.Guna2CheckBox PassCheck;
         private Guna.UI2.WinForms.Guna2Button SignUpButton;
-        private Guna.UI2.WinForms.Guna2Button ForgotPass;
-        private Guna.UI2.WinForms.Guna2ComboBox ChooseUser;
+        private Guna.UI2.WinForms.Guna2Button LoginButton;
     }
 
 

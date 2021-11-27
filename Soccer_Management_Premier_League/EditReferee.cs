@@ -24,18 +24,16 @@ namespace Soccer_Management_Premier_League
         {
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-KBHC686\SQLEXPRESS;Initial Catalog=QLDB;Integrated Security=True"))
             {
-                string id = text_id.Text;
                 string name = text_name.Text;
                 string type = text_type.Text;
                 string quocGia = text_nation.Text;
                 DateTime dateTime = date_birth.Value;
 
                 connection.Open();
-                
+
                 string query = "Update REFEREE set IDREF = @id, REF_NAME = @name, NATIONALITY = @quocGia, DAY_BORN=@dateTime, TYPE_REF = @type where REF_NAME = '" + name + "'";
                 SqlCommand command = new SqlCommand(query, connection);
 
-                command.Parameters.AddWithValue("@id", id);
                 command.Parameters.AddWithValue("@name", name);
                 command.Parameters.AddWithValue("@quocGia", quocGia);
                 command.Parameters.AddWithValue("@dateTime", dateTime);

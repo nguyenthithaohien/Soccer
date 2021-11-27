@@ -37,12 +37,13 @@ namespace Soccer_Management_Premier_League
             this.Player_cbx = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Time_txt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Assistant_cbx = new System.Windows.Forms.ComboBox();
             this.IDCLB = new System.Windows.Forms.Label();
+            this.Time_txt = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Time_txt)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -136,14 +137,6 @@ namespace Soccer_Management_Premier_League
             this.label1.TabIndex = 157;
             this.label1.Text = "Time Score :";
             // 
-            // Time_txt
-            // 
-            this.Time_txt.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Time_txt.Location = new System.Drawing.Point(120, 114);
-            this.Time_txt.Name = "Time_txt";
-            this.Time_txt.Size = new System.Drawing.Size(193, 21);
-            this.Time_txt.TabIndex = 163;
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -177,16 +170,31 @@ namespace Soccer_Management_Premier_League
             this.IDCLB.Text = "IDCLB :";
             this.IDCLB.Visible = false;
             // 
+            // Time_txt
+            // 
+            this.Time_txt.BackColor = System.Drawing.Color.Transparent;
+            this.Time_txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Time_txt.DisabledState.Parent = this.Time_txt;
+            this.Time_txt.FocusedState.Parent = this.Time_txt;
+            this.Time_txt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Time_txt.ForeColor = System.Drawing.Color.Black;
+            this.Time_txt.Location = new System.Drawing.Point(120, 102);
+            this.Time_txt.Name = "Time_txt";
+            this.Time_txt.ShadowDecoration.Parent = this.Time_txt;
+            this.Time_txt.Size = new System.Drawing.Size(66, 36);
+            this.Time_txt.TabIndex = 167;
+            this.Time_txt.UpDownButtonFillColor = System.Drawing.Color.White;
+            // 
             // Score
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(766, 208);
+            this.Controls.Add(this.Time_txt);
             this.Controls.Add(this.IDCLB);
             this.Controls.Add(this.Assistant_cbx);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.Time_txt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Player_cbx);
             this.Controls.Add(this.label17);
@@ -200,9 +208,11 @@ namespace Soccer_Management_Premier_League
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Score_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Time_txt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,9 +227,9 @@ namespace Soccer_Management_Premier_League
         public System.Windows.Forms.ComboBox Player_cbx;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox Time_txt;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.ComboBox Assistant_cbx;
         public System.Windows.Forms.Label IDCLB;
+        private Guna.UI2.WinForms.Guna2NumericUpDown Time_txt;
     }
 }
